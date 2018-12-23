@@ -2,7 +2,7 @@
 
 //JSON doc 
 var ourRequest = new XMLHttpRequest();
-ourRequest.open("GET","employees.json");
+ourRequest.open("GET","https://studiojava.github.io/Ajax/employees.json");
 ourRequest.onload = function (){
 	var ourData = JSON.parse(ourRequest.responseText);
 	//console.log(ourRequest.responseText);
