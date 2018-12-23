@@ -2,6 +2,12 @@
 
 //JSON doc 
 var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET","employees.json");
+xmlhttp.onload = function (){
+	console.log(xmlhttp.responseText);
+};
+xmlhttp.send();
+/*var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myObj = JSON.parse(this.responseText);
@@ -9,7 +15,7 @@ xmlhttp.onreadystatechange = function() {
   }
 };
 xmlhttp.open("GET", "employees.json", true);
-xmlhttp.send();
+xmlhttp.send();*/
 
 /*$.ajax("info.txt").done(function(data){
 	$("#display").text(data);
