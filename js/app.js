@@ -2,11 +2,11 @@
 
 //JSON doc 
 var ourRequest = new XMLHttpRequest();
-ourRequest.open("GET","https://studiojava.github.io/Ajax/employees.json");
+ourRequest.open("GET","https://github.com/StudioJava/Ajax/blob/master/employees.json");
 ourRequest.onload = function (){
-	var ourData = JSON.parse(ourRequest.responseText);
-	//console.log(ourRequest.responseText);
-	console.log(ourData[0]);
+	//var ourData = JSON.parse(ourRequest.responseText);
+	console.log(ourRequest.responseText);
+	//console.log(ourData[0]);
 };
 ourRequest.send();
 /*var xmlhttp = new XMLHttpRequest();
