@@ -1,11 +1,21 @@
 // JavaScript Document
 
+//JSON doc 
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("demo").innerHTML = myObj.name;
+  }
+};
+xmlhttp.open("GET", "employees.json", true);
+xmlhttp.send();
 
-$.ajax("info.txt").done(function(data){
+/*$.ajax("info.txt").done(function(data){
 	$("#display").text(data);
 }).fail(function(){
 	alert("Could not get data from file");
-});
+});*/
 
 //Tegular Expressions
 /*var regex = /is/;
