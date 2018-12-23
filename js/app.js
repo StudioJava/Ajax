@@ -6,7 +6,7 @@ ourRequest.open("GET","employees.json");
 ourRequest.onload = function (){
 	var ourData = JSON.parse(ourRequest.responseText);
 	//console.log(ourRequest.responseText);
-	console.log(ourData);
+	console.log(ourData[0]);
 };
 ourRequest.send();
 /*var xmlhttp = new XMLHttpRequest();
