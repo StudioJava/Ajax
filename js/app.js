@@ -1,12 +1,14 @@
 // JavaScript Document
 
 //JSON doc 
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET","employees.json");
-xmlhttp.onload = function (){
-	console.log(xmlhttp.responseText);
+var ourRequest = new XMLHttpRequest();
+ourRequest.open("GET","employees.json");
+ourRequest.onload = function (){
+	var ourData = JSON.parse(ourRequest.responseText);
+	//console.log(ourRequest.responseText);
+	console.log(ourData);
 };
-xmlhttp.send();
+ourRequest.send();
 /*var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
