@@ -1,14 +1,30 @@
 // JavaScript Document
 
+
+
+
 //JSON doc 
 var ourRequest = new XMLHttpRequest();
-ourRequest.open("GET","https://github.com/StudioJava/Ajax/blob/master/employees.json");
+ourRequest.open("GET","employees.json");
 ourRequest.onload = function (){
-	//var ourData = JSON.parse(ourRequest.responseText);
-	console.log(ourRequest.responseText);
-	//console.log(ourData[0]);
+	var ourData = JSON.parse(ourRequest.responseText);
+//console.log(ourRequest.responseText);
+	$("#click").click(function(){
+		print(ourData);
+	//document.getElementById("display").innerHTML = ourData[0].name;
+});
+	
 };
 ourRequest.send();
+
+function print(data){
+	var htmlString ="";
+	for(var i = 0;i<data.length;i++){
+		 htmlString += "<p>" + data[i] + "</p>";
+	}
+}
+
+
 /*var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {

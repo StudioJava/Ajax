@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled Document</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+	
+  </head>
+  <body>
+  	<!-- body code goes here -->
+	  <div id="demo"></div>
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.2.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script> 
+	<script src="js/bootstrap-4.0.0.js"></script>
+	  <script>
+	 
+var array = [
+	{firstName: "John",
+  lastName : "Doe",
+  id       : 5565,
+  fullName : function() {
+    return this.firstName + " " + this.lastName+ "<br>" + this.id;
+  }},{firstName: "Peter",
+  lastName : "Allan",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName + "<br>" + this.id;
+  }}
+];
+	 console.log(array.length);
+	array.push({firstName:"Teddy",lastName:"Nelson",id:5567,fullName : function() {
+    return this.firstName + " " + this.lastName+ "<br>" + this.id;
+  } });  
+		 console.log(array.length);
+	
+		 Create an object constructor
+		  
+		  
+		  var list = "<ol>";
+		for(var i =0;i < array.length;i++){
+			list += "<li>" + array[i].fullName() +"</li>"
+			
+		}
+		  $("#demo").html(list);
+		  
+		//  alert(array[0].name);
+
+
+	  </script>
+  </body>
+</html>
