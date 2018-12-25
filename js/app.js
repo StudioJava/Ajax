@@ -1,10 +1,15 @@
 // JavaScript Document
 
-
+var ourRequest = new XMLHttpRequest();
+		  ourRequest.open("GET","https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=80dde2e1bdfc7b2034e93a79eede50aa");
+		  ourRequest.onload = function(){
+			console.log(ourRequest.responseText);
+		  };
+		  ourRequest.send();
 
 
 //JSON doc 
-var ourRequest = new XMLHttpRequest();
+/*var ourRequest = new XMLHttpRequest();
 ourRequest.open("GET","employees.json");
 ourRequest.onload = function (){
 	var ourData = JSON.parse(ourRequest.responseText);
@@ -23,7 +28,7 @@ function print(data){
 		 htmlString += "<p>" + data[i] + "</p>";
 	}
 }
-
+*/
 
 /*var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
