@@ -5,7 +5,7 @@
 		  ourRequest.onload = function(){
 			console.log(ourRequest.responseText);
 		  };
-		  ourRequest.send();
+		  ourRequest.send(null);
 
 //JSON doc 
 /*var ourRequest = new XMLHttpRequest();
