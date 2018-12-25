@@ -11,7 +11,6 @@
   </head>
   <body>
   	<!-- body code goes here -->
-	  <div id="demo"></div>
 
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
@@ -20,5 +19,21 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/popper.min.js"></script> 
 	<script src="js/bootstrap-4.0.0.js"></script>
+	  <script>
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+      // document.getElementById("demo").innerHTML = xhttp.responseText;
+		var response = JSON.parse(xhttp.responseText);//Create a variable
+		console.log(response.people); 
+		
+		
+    }
+};
+xhttp.open("GET", "employees.json", true);
+xhttp.send();
+	  
+	  </script>
   </body>
 </html>
