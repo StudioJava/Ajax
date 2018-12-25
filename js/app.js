@@ -1,12 +1,11 @@
 // JavaScript Document
 
-var ourRequest = new XMLHttpRequest();
-		  ourRequest.open("GET","https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=80dde2e1bdfc7b2034e93a79eede50aa");
+ var ourRequest = new XMLHttpRequest();
+		  ourRequest.open("GET","https://samples.openweathermap.org/data/2.5/history/accumulated_precipitation?id=2885679&start=1505336400&end=1505941200&appid=b1b15e88fa797225412429c1c50c122a1");
 		  ourRequest.onload = function(){
 			console.log(ourRequest.responseText);
 		  };
 		  ourRequest.send();
-
 
 //JSON doc 
 /*var ourRequest = new XMLHttpRequest();
